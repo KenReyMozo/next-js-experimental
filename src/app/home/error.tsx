@@ -1,16 +1,17 @@
 'use client'
- 
-export default function Error({
-  error,
-  reset,
-}: {
+
+import ErrorPage from "@/components/error"
+
+type ErrorT = {
   error: Error & { digest?: string }
   reset: () => void
-}) {
+}
+
+const Error: React.FC<ErrorT> = (props) => {
+
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button onClick={() => reset()}>Try again</button>
-    </div>
+    <ErrorPage {...props}/>
   )
 }
+
+export default Error
