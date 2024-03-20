@@ -2,11 +2,6 @@
 
 import ErrorPage from "@/components/error"
 
-type ErrorT = {
-  error: Error & { digest?: string }
-  reset: () => void
-}
-
 const Error: React.FC<ErrorT> = (props) => {
 
   return (
